@@ -26,7 +26,7 @@ const data = {
   "ধরপাড়া (১৭)": "FILE_ID",
   "মন্নিয়া (১৮)": "FILE_ID",
   "চরমইনা (১৯)": "FILE_ID",
-    "প্রজাপতি (২০)": "FILE_ID",
+   "প্রজাপতি (২০)": "FILE_ID",
   "সিন্দুরতলি (২১)": "FILE_ID",
   "শিলদহ (২২)": "FILE_ID",
   "চর নন্দনের পাড়া (২৩)": "FILE_ID",
@@ -56,6 +56,26 @@ const data = {
   "গাঁওকুড়া (৪৭)": "FILE_ID",
   "ভেঙ্গুরা (৪৮)": "FILE_ID",
   "শংকর পুর (৪৯)": "FILE_ID"
+  "বালিয়াদহ (৫০)": "৯০",
+"বামনা (৫১)": "৯০",
+"চেঙ্গারগড় (৫২)": "৯০",
+"গঙ্গা পাড়া (৫৩)": "৯০",
+"লাউদত্ত (৫৪)": "৯০",
+"রৌহারকান্দা (৫৫)": "৯০,
+"মুকসিমলা (৫৬)": "৯০",
+"গামারিয়া (৫৭)": " ৯০",
+"হারিয়াবাড়ী (৫৮)": "৯০",
+"বাধির আলগা (৫৯)": "৯০",
+"টঙ্গের আলগা (৬০)": "৯০",
+"তেঘরিয়া (৬১)": "৯০",
+"বাইটকামারী (৬২)": "৯০",
+"পলবান্দা (৬৩)": "৯০",
+"চরগাঁওকুড়া (৬৪)": "৯০",
+"জাল্লা (৬৫)": "৯০",
+"ইসলামপুর (৬৬)": "৯০",
+"চারিয়া (৬৭)": "৯০",
+"বাহাদুর পুর (৬৮)": "৯০",
+"সিরাজা বাদ (৬৯)": "৯০",
 
       },
       "দেওয়ানগঞ্জ": {
@@ -133,42 +153,5 @@ document.getElementById("mouzaForm").addEventListener("submit", function(e) {
     window.open(downloadUrl, '_blank');
   } else {
     alert("এই নির্বাচিত অপশনের জন্য কোনো ফাইল পাওয়া যায়নি!");
-  }
-});
-
-
-document.getElementById("mouzaForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const upazila = document.getElementById("upazila");
-  const selectedMouza = upazila.options[upazila.selectedIndex]?.text.trim();
-
-  const fileData = {
-    "সিন্দুরতলা (জে এল নং:২১ [21])": [
-      { name: "21-1.jpg", size: "22.27 MB", id: "1A2B3C4D5E6F7G8H9I" },
-      { name: "21-2.jpg", size: "25.53 MB", id: "9H8G7F6E5D4C3B2A1Z" }
-    ]
-  };
-
-  const resultsDiv = document.getElementById("results");
-  const resultSection = document.getElementById("resultSection");
-
-  if (fileData[selectedMouza]) {
-    let html = "";
-    fileData[selectedMouza].forEach(file => {
-      html += `
-        <div class="file-entry">
-          <div>
-            <div class="file-name">${file.name}</div>
-            <div class="file-size">${file.size}</div>
-          </div>
-          <a href="https://drive.google.com/uc?export=download&id=${file.id}" class="download-icon" download>⬇️</a>
-        </div>`;
-    });
-    resultsDiv.innerHTML = html;
-    resultSection.style.display = "block";
-  } else {
-    resultsDiv.innerHTML = "<p>ডেটা পাওয়া যায়নি।</p>";
-    resultSection.style.display = "block";
   }
 });
