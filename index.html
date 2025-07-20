@@ -2,14 +2,90 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>E-Noksha</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ই-নকশা</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    .header {
+      background: #1e40af;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin: -2.5rem -2.5rem 1rem -2.5rem;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
+    }
+    .dark-mode {
+      background: linear-gradient(135deg, #1a202c, #2d3748);
+    }
+    .dark-mode .container {
+      background: #2d3748;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .dark-mode .header {
+      background: #2b6cb0;
+    }
+    .dark-mode h1 {
+      color: #e2e8f0;
+    }
+    .dark-mode p, .dark-mode .last-updated {
+      color: #a0aec0;
+    }
+    .dark-mode label {
+      color: #e2e8f0;
+    }
+    .dark-mode select, .dark-mode input[type="text"] {
+      background: #4a5568;
+      color: #e2e8f0;
+      border-color: #4a5568;
+    }
+    .dark-mode select:focus, .dark-mode input[type="text"]:focus {
+      border-color: #63b3ed;
+      box-shadow: 0 0 5px rgba(99, 179, 237, 0.5);
+    }
+    .dark-mode .btn-primary {
+      background: #3182ce;
+    }
+    .dark-mode .btn-primary:hover {
+      background: #2b6cb0;
+    }
+    .dark-mode .radio-group input[type="radio"] {
+      accent-color: #63b3ed;
+    }
+    .dark-mode #downloadList .download-item {
+      background: #4a5568;
+      border-color: #718096;
+    }
+    .dark-mode #downloadList .download-item a {
+      color: #63b3ed;
+    }
+    .dark-mode #downloadList .download-item:hover {
+      background: #3c4251;
+    }
+	.footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+  </style>
 </head>
-<body>
+<body class="transition-colors duration-300">
   <div class="container">
-    <h2>E-Noksha</h2>
-    <h2>অনুসন্ধান করে ডাউনলোড করুন</h2>
+    <div class="header">
+      <h1 class="text-3xl font-bold">ই-নকশা</h1>
+      <p class="text-sm">অনুসন্ধান করে ডাউনলোড করতে হবে</p>
+	 <marquee width="100%" direction="left" height="20px">
+বি আর এস,মৌজা ম্যাপ ডাউনলোড করুন, শুধু মাত্র ইসলামপুর উপজেলার মৌজা ম্যাপ আপডেট করা আছে...
+</marquee>
+    </div>
+
 
     <form id="mouzaForm">
       <label>বিভাগ *</label>
@@ -43,5 +119,8 @@
   </div>
 
   <script src="script.js"></script>
+  <div class="footer">
+  <p>©ই-নকশা 2025 MyWebsite. All rights reserved.</p>
+    </div>
 </body>
 </html>

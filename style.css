@@ -1,15 +1,15 @@
 body {
   font-family: 'Arial', sans-serif;
   background: #f2f2f2;
-  padding: 20px;
+  padding: 40px;
 }
 
 .container {
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
   background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 h2 {
@@ -18,13 +18,13 @@ h2 {
 
 label {
   display: block;
-  margin-top: 15px;
+  margin-top: 40px;
 }
 
 select {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 10px;
+  margin-top: 7px;
 }
 
 .radio-group {
@@ -32,10 +32,10 @@ select {
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 30px;
   width: 100%;
-  padding: 10px;
-  background: green;
+  padding: 12px;
+  background: blue;
   color: white;
   border: none;
   border-radius: 5px;
